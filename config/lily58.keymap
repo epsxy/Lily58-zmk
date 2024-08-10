@@ -27,7 +27,7 @@
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y   &kp U        &kp I       &kp O        &kp P        &kp RBKT
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H   &kp J        &kp K       &kp L        &kp FR_M     &kp SQT
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &mo 1      &mo 2    &kp N   &kp FR_COMMA &kp FR_SEMI &kp FR_COLON &kp FR_EQUAL &kp FR_STAR
-                     &kp LALT &kp RALT &kp LGUI  &kp SPACE  &kp BSPC &kp RET &kp Y        &none
+                     &kp LALT &kp RALT &kp LGUI  &kp SPACE  &kp BSPC &kp RET &none        &none
             >;
         };
 
@@ -50,18 +50,18 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       | BOOT  |
-// |       |     |  ↑  |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |  ↑  |      |      |iterm |                   |      |       |       |      |       |       |
 // |       |  <- |  ↓  |  ->  |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
+// |       |     |     |      |      |screen|        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Raise";
             bindings = <
-&none    &none    &none    &none     &none    &none                                                   &none    &none    &none    &none    &none    &bootloader
-&none    &none    &kp UP   &none     &none    &kp LC(RA(SPACE))                                       &none    &none    &none    &none    &none    &none
-&none    &kp LEFT &kp DOWN &kp RIGHT &none    &none                                                   &none    &none    &none    &none    &none    &none
-&none    &none    &none    &none     &none    &none                    &none                &none     &none    &none    &none    &none    &none    &none
-                           &none     &none    &none                    &none                &none     &none    &none    &none
+&none    &none    &none    &none     &none    &none                                                   &kp C_VOL_UP &kp C_VOL_DN &none    &none    &none    &none
+&none    &none    &kp UP   &none     &none    &kp LC(RA(SPACE))                                       &none        &none        &none    &none    &none    &none
+&none    &kp LEFT &kp DOWN &kp RIGHT &none    &none                                                   &none        &none        &none    &none    &none    &none
+&none    &none    &none    &none     &none    &kp LC(LS(LG(FR_SQT)))   &none                &none     &none        &none        &none    &none    &none    &none
+                           &none     &none    &none                    &none                &none     &none        &none        &none
             >;
         };
     };
