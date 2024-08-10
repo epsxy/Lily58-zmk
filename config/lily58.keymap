@@ -50,14 +50,14 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       | BOOT  |
 // |       |     |  ↑  |      |      |      |                   |      |       |       |      |       |       |
 // |       |  <- |  ↓  |  ->  |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Raise";
             bindings = <
-&none    &none    &none    &none     &none    &none                                                   &none    &none    &none    &none    &none    &none
+&none    &none    &none    &none     &none    &none                                                   &none    &none    &none    &none    &none    &bootloader
 &none    &none    &kp UP   &none     &none    &kp LC(RA(SPACE))                                       &none    &none    &none    &none    &none    &none
 &none    &kp LEFT &kp DOWN &kp RIGHT &none    &none                                                   &none    &none    &none    &none    &none    &none
 &none    &none    &none    &none     &none    &none                    &none                &none     &none    &none    &none    &none    &none    &none
