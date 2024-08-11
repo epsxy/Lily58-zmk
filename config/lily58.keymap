@@ -16,18 +16,18 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-// |  TAB  |  A  |  Z  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  CTRL |  Q  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   M   |   '   |
-// | SHIFT |  W  |  X  |  C   |  V   |  B   |  LOWER |  | RAISE |  N   |  ,    |  ;    |  :   |   =   | SHIFT |
-//                     | ALT  | RIGHT|  GUI |  SPACE |  | BSPC  | ENTER| XXXX  | XXX   |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `?  |
+// |  TAB  |  A  |  Z  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -?  |
+// |  CTRL |  Q  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   M   |   '?  |
+// | SHIFT |  W  |  X  |  C   |  V   |  B   |  LOWER |  | RAISE |  N   |  ,    |  ;    |  :   |   =   |   *   |
+//                     | ALT  | RIGHT|  GUI |  SPACE |  | BSPC  | ENTER| XXXX  |launchr|
             display-name = "Base";
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6  &kp N7       &kp N8      &kp N9       &kp N0       &kp MINUS
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y   &kp U        &kp I       &kp O        &kp P        &kp RBKT
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H   &kp J        &kp K       &kp L        &kp FR_M     &kp SQT
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &mo 1      &mo 2    &kp N   &kp FR_COMMA &kp FR_SEMI &kp FR_COLON &kp FR_EQUAL &kp FR_STAR
-                     &kp LALT &kp RALT &kp LGUI  &kp SPACE  &kp BSPC &kp RET &none        &none
+                     &kp LALT &kp RALT &kp LGUI  &kp SPACE  &kp BSPC &kp RET &none        &kp LA(SPACE)
             >;
         };
 
@@ -37,13 +37,13 @@
 // |       |     |     |  ^   |  ¨   |      |                   |  (   |  )    |  {    |  }   |  [    |  ]    |
 // |       |     |     |      |      |      |                   |  #   |  &    |  *    | "|"  |   %   |       |
 // |       |     |     |      |      |      |        |  |       |  ~   |  <    |  >    |      |       |       |
-//                     |      |      |      |        |  |  DEL  |      |       |       |
+//                     |      |      |      |        |  |  DEL  |      |scr <- | -> scr|
             display-name = "Lower";
             bindings = <
 &kp F1     &kp F2           &kp F3            &kp F4            &kp F5        &kp F6                       &kp F7       &kp F8       &kp F9      &kp F10     &kp F11      &kp F12
 &kp TAB    &none            &none             &kp FR_CARET      &kp FR_UMLAUT &none                        &kp FR_LPAR  &kp FR_RPAR  &kp FR_LBRC &kp FR_RBRC &kp FR_LBKT  &kp FR_RBKT
 &kp LSHFT  &none            &none             &none             &none         &none                        &kp FR_HASH  &kp FR_AMPS  &kp FR_STAR &kp FR_PIPE &kp FR_PRCNT &none
-&kp LCTRL  &none            &none             &none             &none         &none     &none    &none     &kp FR_TILDE &kp FR_LT    &kp FR_GT   &none       &none        &none
+&kp LCTRL  &none            &none             &none             &none         &none     &none    &none     &kp FR_TILDE &kp FR_LT    &kp FR_GT   &none       &none        &kp LC(UP)
                                               &none             &none         &none     &none    &kp DEL   &none        &kp LC(LEFT) &kp LC(RIGHT)
             >;
         };
