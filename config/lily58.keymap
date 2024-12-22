@@ -50,17 +50,17 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |VOL UP|VOL DN |       |      |       |       |
+// |       |     |     |      |      |      |                   |VOL UP|VOL DN |       |      |       |ZMK STD|
 // |       |     |  ↑  |      |      |iterm |                   |      |       |       |      |       |       |
 // |       |  <- |  ↓  |  ->  |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |screen|        |  |       |      |       |       |      |       |       |
+// |       |     |     |      |      |screen|        |  |       |      |       |       |      |BT PREV|BT NEXT|
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Raise";
             bindings = <
-&none    &none    &none    &none     &none    &none                                                   &kp C_VOL_UP &kp C_VOL_DN &none    &none    &none    &none
+&none    &none    &none    &none     &none    &none                                                   &kp C_VOL_UP &kp C_VOL_DN &none    &none    &none    &studio_unlock
 &none    &none    &kp UP   &none     &none    &kp LC(RA(SPACE))                                       &none        &none        &none    &none    &none    &none
 &none    &kp LEFT &kp DOWN &kp RIGHT &none    &none                                                   &none        &none        &none    &none    &none    &none
-&none    &none    &none    &none     &none    &kp LC(LS(LG(FR_SQT)))   &none                &none     &none        &none        &none    &none    &none    &none
+&none    &none    &none    &none     &none    &kp LC(LS(LG(FR_SQT)))   &none                &none     &none        &none        &none    &none    &bt BT_PRV  &bt BT_NXT
                            &none     &none    &none                    &none                &none     &none        &none        &none
             >;
         };
